@@ -10,12 +10,21 @@
     <body>
       <div id="root"></div>
       <script type="text/babel">
-      
-      
-       
-        function App(){
+
+        function Name(){
+          return(
+            <p>JSX is JavaScript XML</p>
+          )
         
-        return(
+
+
+      
+        }
+       
+
+       const App = () => (
+        
+       
         <>
         <h1>React Project</h1>
         <p>Skills used to make this project</p>
@@ -23,13 +32,17 @@
         <li>HTML</li>
            <li>javascript</li>
               <li>CSS</li>
+              
         </ol>
+        
+        <Name />
+       
         </>
         
         )
+      
         
-        }
-        ReactDOM.createRoot(document.getElementById("root")).render(<App />)
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
       </script>
     </body>
 </html>
