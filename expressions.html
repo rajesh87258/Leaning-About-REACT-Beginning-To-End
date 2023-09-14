@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting With JSX</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+
+        function App(){
+            var name = "RajeSh kaShYaP";
+            var age = 23;
+            let demo = null;
+            let undefinedVar; // Corrected variable name
+            
+            let a = 25;
+            let b = 20;
+            var obj = {
+                bigSmall: function() {
+                    if (a < b) {
+                        console.log('b is big');
+                    } else {
+                        console.log('b is small');
+                    }
+                }
+            };
+            obj.bigSmall();
+
+            return (
+                <>
+                    <h1>Lets Learn JSX with {name}</h1>
+                    <p>Your age is {age}</p>
+                    <p>Null value is {demo}</p>
+                    <p>Undefined value is {undefinedVar}</p>
+                  
+                    <p>b is {obj.bigSmall.toString()}</p>
+                </>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+    </script>
+    
+</body>
+</html>

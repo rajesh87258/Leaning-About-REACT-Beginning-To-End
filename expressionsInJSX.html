@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression in Jsx</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel"> 
+    function sum(){
+        let a = 4+5;
+        return a;
+    }
+    const header = <h2>JSX Expression</h2>
+        
+        function App(){
+            var intro = "Hy I'm";
+            var name = "Rajesh";
+            var age = 23;
+            let demo = null;
+            let undef;
+            const bool = true;
+            return(
+                <>
+                <h1>{intro} {name}</h1>
+                {header}
+                <p> my age is {age}</p>
+                <p> null is {demo}</p>
+                <p> undefined is {undef}</p>
+                <p> true or false: {bool.toString()}</p>
+                <p> calling a function: {sum()}</p>
+                
+
+                </>
+            )
+        }
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+
+    </script>
+
+    
+</body>
+</html>
