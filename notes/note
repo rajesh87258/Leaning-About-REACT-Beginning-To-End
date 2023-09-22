@@ -1,0 +1,24 @@
+what is a iterator?
+-->
+
+An iterator is an object in JavaScript that provides a way to access elements in a collection, such as an array, set, or map, one at a time. It allows you to loop or iterate through the elements of a collection in a sequential manner, retrieving each element as you go along. Iterators are typically used in conjunction with loops or other control structures to process or manipulate the elements in a collection.
+
+In JavaScript, iterators are used primarily with iterable objects. An iterable is an object that has an associated iterator, which can be used to traverse its elements. Iterable objects include arrays, strings, sets, maps, and more.
+
+Given Question
+-->
+Among the statements provided:
+
+1. "The map method can be used to iterate over an array and return JSX" - TRUE.
+   - The `map` method can be used to iterate over an array and return JSX or any other value you want. It applies a provided function to each element of the array and constructs a new array with the results.
+
+2. "The filter method can be used to filter an array based on a condition and return JSX" - TRUE.
+   - The `filter` method can be used to filter an array based on a condition and return JSX or any other value. It creates a new array with elements that satisfy the provided condition.
+
+3. "The map method takes a callback function as an argument and returns a new array" - TRUE.
+   - The `map` method indeed takes a callback function as an argument and returns a new array with the results of applying that function to each element of the original array.
+
+4. "The map method receives the array as the first argument to the callback function" - FALSE.
+   - This statement is NOT true. The `map` method does not receive the array as the first argument to the callback function. Instead, it passes three arguments to the callback function in the following order: the current element, the current index, and the original array. You can choose to use any or all of these arguments in your callback function, but the array itself is the third argument.
+
+So, the statement "The map method receives the array as the first argument to the callback function" is the one that is NOT true.

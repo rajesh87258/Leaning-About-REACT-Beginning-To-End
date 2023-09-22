@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starting With JSX</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+
+// function App (){
+
+//     let arr = [1,2,3,4,5,6];
+//     let obj = {
+//         name:"Rajesh"
+//     }
+
+//     return(
+//         <>
+//         <h1>Array and Objects in JavaScript</h1>
+//         <h2>
+//             <ul>
+//                 {arr.map((num)=><h2><li>{num}</li></h2>)}
+//                 </ul>
+//                 </h2>
+//         <h2>{obj.name}</h2>
+//         </>
+//     )
+
+// }
+
+function App(){
+    let cars = ["Audi", "BMW", "Jaguar", "Ferrari", "RollsRoyal"];
+    return(
+        <>
+        <h1><u>Famous Cars Models </u></h1>
+       <h1>
+        <ul>
+            
+            
+        {cars.map((car, index)=><li key={index}><h2>{car} </h2></li>
+        )}
+       
+        </ul>
+            </h1>
+            </>
+    );
+};
+
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+
+        </script>
+
+</body>
+</html>

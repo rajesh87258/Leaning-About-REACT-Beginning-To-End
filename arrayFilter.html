@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filter</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+
+
+   const App =()=>{
+        const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+        let score =numbers.filter((num)=>(num % 2 === 0));
+
+        return(
+            <>
+            <h1> Array in Filter</h1>
+            {
+          /*score =numbers.filter((num)=>(num % 2 === 0))
+          .map((i, index)=><h3 key = {index}>{i}</h3>)
+
+          BOTH ARE CORRECT WAY
+
+
+          */
+            score.map((i, index)=><h3 key = {index}>{i}</h3>)
+
+            }
+            </>
+        )
+
+
+    }
+    const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+
+    rootElement.render(<App />)
+
+
+        </script>
+
+    
+</body>
+</html>
