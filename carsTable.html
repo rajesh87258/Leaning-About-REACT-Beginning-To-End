@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Information</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+
+
+
+
+        function Cars(){
+
+         
+
+           
+
+            let car = [
+                {
+                    model:"BMW",
+                    color:"red",
+                    average:"12LPA",
+                    imageUrl:"./image/Screenshot 2023-09-22 222633.png"
+                    
+                },
+                {
+                    model:"Rolls",
+                    color:"black",
+                    average:"15lpA",
+                    imageUrl:"./image/Screenshot 2023-09-22 222633.png"
+                    
+                },
+                {
+                    model:"maruti",
+                    color:"orange",
+                    average:"22LPA",
+                    imageUrl:"./image/Screenshot 2023-09-22 222633.png"
+
+                    
+                }
+            ];
+            return(
+                <>
+                <h1>CARS DETAILS</h1>
+                <table>
+
+                    <thead>
+
+
+                        <tr>
+                            <th>IMAGE</th>
+                            <th>NAME</th>
+                            <th>Color</th>
+                            <th>AVERAGE</th>
+                        </tr> 
+
+                    </thead>
+                    <tbody>
+                        {car.map((vehicle,index)=>(
+                            <tr key ={index}>
+                                <td><img src={vehicle.imageUrl} height="50px" widht="50px"/></td>
+                                <td>{vehicle.model}</td>
+                                <td>{vehicle.color}</td>
+                                <td>{vehicle.average}</td>
+
+                            </tr>
+                        ))}
+                    </tbody>
+
+                </table>
+                </>
+            )
+
+
+        }
+        ReactDOM.createRoot(document.getElementById("root")).render(<Cars />);
+
+
+
+    </script>
+</body>
+</html>
