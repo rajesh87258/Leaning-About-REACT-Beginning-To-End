@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ternary operator</title>
+    <title>conditional rendering using OR</title>
     <link rel="stylesheet" type="text/css" href="./aStyle.css">
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -15,13 +15,20 @@
     </div>
     <script type="text/babel">
 
+       
+
         function App(){
+            const firstName = "Rajesh";
+            const lastName = "";
+
+           
 
         //    const loggedIn = true;
-              const loggedIn = false;
+              const loggedIn =true;
            return(
             <>
-            <h1> Hello {loggedIn?"Alexa":"User"}!</h1>
+            <h1>hello {loggedIn? lastName || firstName:"User"}</h1>
+            {loggedIn && <p>Welcome to the Portal</p> }
             </>
            )
         }
