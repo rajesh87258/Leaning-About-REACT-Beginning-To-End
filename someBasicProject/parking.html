@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>React App</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Create handlers to increase and decrease vehicle count here
+
+
+
+
+
+
+
+        let veichecount = 0;
+
+
+        function icount() {
+            veichecount++;
+            rootElement.render(<App />);
+        }
+
+        function dcount() {
+
+            if (veichecount > 0) {
+                veichecount--;
+                rootElement.render(<App />);
+            }
+
+        }
+
+
+
+        let count = 0;
+
+
+        function iicount() {
+            count++;
+            rootElement.render(<App />);
+        }
+
+        function ddcount() {
+
+            if (count > 0) {
+                count--;
+                rootElement.render(<App />);
+            }
+
+        }
+
+
+
+
+
+
+
+
+        let cyclecount = 0;
+
+
+        function iiicount() {
+            cyclecount++;
+            rootElement.render(<App />);
+        }
+
+        function dddcount() {
+
+            if (cyclecount > 0) {
+                cyclecount--;
+                rootElement.render(<App />);
+            }
+
+        }
+
+
+        let scotycount = 0;
+
+
+function iiiicount() {
+    scotycount++;
+    rootElement.render(<App />);
+}
+
+function ddddcount() {
+
+    if (scotycount > 0) {
+        scotycount--;
+        rootElement.render(<App />);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+        const App = () => (
+            <>
+                <p>List of all the vehicles count in the parking.</p>
+                <ol>
+                    <li>
+                        <p>
+                            <b>Car:{veichecount} </b> &emsp;
+
+                            <button onClick={icount} >Increase </button> &nbsp;  <button onClick={dcount}>Decrease </button>
+
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Bike: {count}  </b> &emsp;
+                            <button onClick={iicount} >Increase </button> &nbsp;  <button onClick={ddcount} >Decrease </button>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Scooty:  {scotycount} </b> &emsp;
+                            <button onClick={iiiicount}>Increase </button> &nbsp;  <button onClick={ddddcount}>Decrease </button>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Bicycle: {cyclecount} </b> &emsp;
+                            <button onClick={iiicount}>Increase </button> &nbsp;  <button onClick={dddcount}>Decrease </button>
+                        </p>
+                    </li>
+                </ol>
+            </>
+        );
+
+        const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+        rootElement.render(<App />);
+    </script>
+</body>
+
+</html>
